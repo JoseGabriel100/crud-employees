@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Alfred",
+    "surname": "Christensen",
+    "department": "General Dentistry"
+  },
+  {
+    "name": "John",
+    "surname": "Dudley",
+    "department": "General Dentistry"
+  },
+  {
+    "name": "Janet",
+    "surname": "Doe",
+    "department": "General Dentistry"
+  },
+  {
+    "name": "Francisco",
+    "surname": "Willard",
+    "department": "Pediatric Dentistry"
+  },
+  {
+    "name": "Sarah",
+    "surname": "Alvarez",
+    "department": "Pediatric Dentistry"
+  },
+  {
+    "name": "Lisa",
+    "surname": "Harris",
+    "department": "Restorative Dentistry"
+  },
+  {
+    "name": "Danny",
+    "surname": "Perez",
+    "department": "Restorative Dentistry"
+  },
+  {
+    "name": "Constance",
+    "surname": "Smith",
+    "department": "Surgery"
+  },
+  {
+    "name": "Leslie",
+    "surname": "Roche",
+    "department": "Orthodontics"
+  },
+  {
+    "name": "Lisa",
+    "surname": "Harris",
+    "department": "Orthodontics"
+  }
+]

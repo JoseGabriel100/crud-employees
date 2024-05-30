@@ -1,0 +1,38 @@
+version: "3.1"
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    # volumes:
+    #   - ./data/db:/data/db
+    networks:
+      - app-network
+
+  mongo-seed:
+    image: mongo:latest
+    container_name: mongo-seed
+    depends_on:
+      - mongodb
+    volumes:
+      - ./data/departments.json:/data/departments.json
+      - ./data/employees.json:/data/employees.json
+    command: bash -c "mongoimport --host mongodb --db apolonia_dental --collection departments --file /data/departments.json --jsonArray && mongoimport --host mongodb --db apolonia_dental --collection employees --file /data/employees.json --jsonArray"
+    networks:
+      - app-network
+
+  app:
+    build: .
+    container_name: app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo-seed
+    volumes:
+      - .:/app
+    networks:
+      - app-network
+
+networks:
+  app-network:
