@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  header.flex.space-between
+        a(href="/employees", rel="noopener")
+          img(src="/img/wolf_icon.png", alt="logo").logo
+        a(href="/employees/add", rel="noopener").btn.btn-add.align-center Add Employee
+  div.employee-container
+    each employee in employees
+        div.employee-item
+          div= `${employee.name} ${employee.surname}`
+          div= employee.department
+          div.flex.space-evenly
+            a(href=`/employees/edit/${employee._id}`, rel="noopener").btn.btn-edit: i.fa-solid.fa-pen-to-square
+            a(href=`/employees/delete/${employee._id}`).btn.btn-delete: i.fa-solid.fa-trash
+    else
+      p There aren't employees

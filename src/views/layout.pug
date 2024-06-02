@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon", href="/img/wolf_icon.png")
+    //- FONT AWESOME
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="/css/style.css")
+    title Document
+  body
+    main.container
+      //- header.flex.space-between
+      //-   a(href="/employees", rel="noopener")
+      //-     img(src="/img/wolf_icon.png", alt="logo").logo
+
+      //-   a(href="/employees/add", rel="noopener").btn.btn-add.align-center Add Employee
+      block content
+      footer: p.text-center &copy; 2024 José Caycho
+    script(src="/js/main.js", type="module")

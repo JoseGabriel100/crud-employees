@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  header.flex.space-between
+    a(href="/employees", rel="noopener")
+      img(src="/img/wolf_icon.png", alt="logo").logo
+  div.flex.flex-direction-column.align-center.justify-content
+    h1.error-title= title
+    p.error-message
+      b= message
+    a(href="/employees").btn.btn-back Back

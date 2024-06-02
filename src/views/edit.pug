@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  header.flex.space-between
+    a(href="/employees", rel="noopener")
+      img(src="/img/wolf_icon.png", alt="logo").logo
+  
+  form(action=`/employees/edit/${employee._id}`, method="post")
+    label(for="name") Name
+    input(type="text", id="name", name="name", placeholder="Name", value=`${employee.name}`, required)
+
+    label(for="surname") Surname
+    input(type="text", id="surname", name="surname", placeholder="Surname", value=`${employee.surname}`, required)
+      
+    label(for="department") Department
+    select(name="department", id="department")
+      each department in deparments
+        option(value=`${department.name}`, selected=employee.department === department.name)= `${department.name}`
+    input(type="submit", value="Save")
